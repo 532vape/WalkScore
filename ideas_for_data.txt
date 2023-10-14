@@ -1,0 +1,6 @@
+Ideas on how to use walkscore data:
+1. heatmap
+2. interactive heatmap (mucho difficult)
+3. infographic on most walkable areas?
+i think that's about it. if the heatmap doesnt work out project might
+just be over.
