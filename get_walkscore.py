@@ -17,7 +17,7 @@ points_w_error = []
 
 # iterate through coordinate_list (list of lists)
 # coordinate_list[i] = [lon, lat, walkscore]
-for i in range(300): # range(len(coordinate_list)):
+for i in range(len(coordinate_list)): # range(len(coordinate_list)):
   try:
   # api call to walkscore using lon and lat parameters
     url = f"https://api.walkscore.com/score?format=json&lat={coordinate_list[i][1]}&lon={coordinate_list[i][0]}&wsapikey={config.api_key}"
@@ -36,7 +36,7 @@ for i in range(300): # range(len(coordinate_list)):
     print((coordinate_list[i][0], coordinate_list[i][1], "error"))
     walkscore_csv.append([coordinate_list[i][0], coordinate_list[i][1], "error"])
     points_w_error.append([coordinate_list[i][0], coordinate_list[i][1]])
-print(walkscore_csv)
+print("Done! Check output .csvs for any errors")
 
 # export list of points that return errors
 with open('errors.csv', 'w', newline='') as csvfile:
