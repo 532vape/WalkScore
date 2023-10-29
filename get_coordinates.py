@@ -12,8 +12,8 @@ lat_max = 34.429613
 # reduced size to 70x70 grid of points since walkscore api daily limit
 # is 5000. Can increase later but just for the sake of getting the heatmap
 # out fast
-lon = np.linspace(lon_min, lon_max, 70)
-lat = np.linspace(lat_min, lat_max, 70)
+lon = np.linspace(lon_min, lon_max, 30)
+lat = np.linspace(lat_min, lat_max, 30)
 
 # Save the grid of coordinates to a file
 with open("grid.csv", "w") as f:
